@@ -38,6 +38,14 @@ module Quartz
       @output = @device.value.max_output_channels.as(Int32)
       @sample_rate = @device.value.default_sample_rate.as(Float64)
     end
+    
+    def initialize
+      @name=""
+      @host=-1
+      @input=0
+      @output=0
+      @sample_rate=0
+    end
 
     def inspect(io : IO)
       to_s(io)

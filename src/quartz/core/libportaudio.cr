@@ -1,4 +1,5 @@
-@[Link(ldflags: "#{__DIR__}/../../../dep/libportaudio.a -lrt -lm -lasound -ljack -pthread")]
+#@[Link(ldflags: "#{__DIR__}/../../../dep/libportaudio.a -lrt -lm -lasound -ljack -pthread")]
+@[Link(ldflags: "/usr/lib/x86_64-linux-gnu/libportaudio.a -lrt -lm -lasound -ljack -pthread")]
 lib LibPortAudio
   # api data structures
   struct PaVersionInfo
