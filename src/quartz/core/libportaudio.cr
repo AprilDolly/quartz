@@ -210,6 +210,10 @@ lib LibPortAudio
   fun get_ring_buffer_read_available = PaUtil_GetRingBufferReadAvailable(rbuf : PaUtilRingBuffer*) : RingBufferSizeT
   fun write_ring_buffer = PaUtil_WriteRingBuffer(rbuf : PaUtilRingBuffer*, data : Void*, element_count : RingBufferSizeT) : RingBufferSizeT
   fun read_ring_buffer = PaUtil_ReadRingBuffer(rbuf : PaUtilRingBuffer*, data : Void*, element_count : RingBufferSizeT) : RingBufferSizeT
+  
+  # pa_jack.h
+  fun jack_get_client_name=PaJack_GetClientName(clientName : LibC::Char**) : Int32
+  fun jack_set_client_name=PaJack_SetClientName(name : LibC::Char*) : Int32
 end
 
 module PortAudio
